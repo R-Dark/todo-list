@@ -39,8 +39,8 @@ app.post("/completed", function (require, response) {
 //
 // checked.onchange = function() {
 //   if (this.checked) {
-//     app.post("/", function(require, response) {
-//       completed.push(require.body.todos);
+//     app.post("/completed", function(require, response) {
+//       completed.push(require.body.button);
 //       response.redirect('/');
 //     })
 //   }

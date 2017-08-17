@@ -18,14 +18,10 @@
 <div id="myUl">
   <h2>Current Tasks</h2>
   <form class="" action="/completed" method="post">
-
-
-  {{#todos}}
-
-          <button class= "completeButton" type="submit" name="button" value="{{.}}">Mark Complete</button>
-          <h3 class="todoItem">{{.}}</h3>
-
-  {{/todos}}
+    {{#todos}}
+      <button class="completeButton" type="submit" name="button" value="{{.}}">Mark Complete</button>
+      <h3>{{.}}</h3>
+    {{/todos}}
   </form>
 </div>
 
