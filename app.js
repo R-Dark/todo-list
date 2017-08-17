@@ -30,21 +30,18 @@ app.post("/", function(require, response) {
   response.redirect('/');
 })
 
-app.post("/completed", function (require, response) {
-  completed.push(require.body.button);
-  response.redirect('/');
+app.post("/", function (req, res) {
+  todos.push(req.body.todo);
+  res.redirect('/');
 })
 
-// let checked = document.querySelector('.checkbox')
-//
-// checked.onchange = function() {
-//   if (this.checked) {
-//     app.post("/completed", function(require, response) {
-//       completed.push(require.body.button);
-//       response.redirect('/');
-//     })
-//   }
-// }
+app.post("/completed", function (req, res) {
+  let remove = req.body.button
+  todos.splice(todos.indexOf(remove),1
+  );
+  completed.push(remove);
+  res.redirect('/');
+})
 
 app.listen(3000, function() {
   console.log("Express started on port 3000")
